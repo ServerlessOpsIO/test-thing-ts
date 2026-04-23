@@ -36,7 +36,7 @@ jobs:
         run: yarn run test:unit
 
       - name: Assume AWS credentials
-        uses: ServerlessOpsIO/gha-assume-aws-credentials@v1
+        uses: ServerlessOpsIO/gha-assume-aws-credentials@feature/actions-update
         with:
           build_aws_account_id: ${{ secrets.AWS_CICD_ACCOUNT_ID }}
 
@@ -71,7 +71,7 @@ jobs:
           checkout_artifact: true
 
       - name: Assume AWS credentials
-        uses: ServerlessOpsIO/gha-assume-aws-credentials@v1
+        uses: ServerlessOpsIO/gha-assume-aws-credentials@feature/actions-update
         with:
           build_aws_account_id: ${{ secrets.AWS_CICD_ACCOUNT_ID }}
           deploy_aws_account_id: ${{ secrets.DEPLOYMENT_ACCOUNT_ID }}
